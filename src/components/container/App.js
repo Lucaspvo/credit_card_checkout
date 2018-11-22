@@ -1,4 +1,4 @@
-import CheckoutPage from '../presentation/Payment/CheckoutPage.vue';
+import CheckoutPage from '../presentation/CheckoutPage.vue';
 
 export default {
   name: 'app',

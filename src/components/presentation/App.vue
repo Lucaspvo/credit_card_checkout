@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <CheckoutPage></CheckoutPage>
+    <CheckoutPage :products="products"></CheckoutPage>
   </div>
 </template>
 

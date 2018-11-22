@@ -1,0 +1,43 @@
+.products-item-div{
+
+  margin-bottom: 30px;
+
+  .product-thumbnail {
+
+    width: 100px;
+
+  }
+
+  .product-title {
+
+    font-size: 20px;
+    font-weight: 300;
+    text-align: start;
+    width: 100%;
+    color: white;
+    margin-bottom: 3px;
+
+  }
+
+  .product-price {
+
+    font-size: 17px;
+    font-weight: 300;
+    text-align: start;
+    width: 100%;
+    color: white;
+
+  }
+
+  .product-description {
+
+    font-size: 15px;
+    font-weight: 300;
+    text-align: start;
+    width: 100%;
+    color: white;
+    margin-bottom: 25px;
+
+  }
+
+}
