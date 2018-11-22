@@ -1,3 +1,5 @@
+import CheckoutPage from '../presentation/Payment/CheckoutPage.vue';
+
 export default {
   name: 'app',
   data: function () {
@@ -5,4 +7,7 @@ export default {
       msg: 'OLAAAAAAAAA',
     }
   },
-}
+  components: {
+    CheckoutPage,
+  },
+};
