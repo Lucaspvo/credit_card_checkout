@@ -2,34 +2,32 @@
 
     <div class="credit-card-form-div">
 
-        <b-form>
+        <b-form @submit="onSubmit">
 
-            <b-form-group id="card-holder-group"
-                class="label-group"
-                label="CARD HOLDER"
-                label-for="card-holder-input">
+            <b-form-group>
 
-                <b-form-input id="card-holder-input"
-                    class="input-group"
-                    type="text"
-                    v-model="cardHolder"
-                    required>
-                </b-form-input>
+                <label class="label-group">CARD HOLDER</label>
+
+                <BaseInput
+                    :formatter="{ charactersOnly, upperCase }"
+                    :value="form.cardHolder"
+                    name="cardHolder"
+                />
 
             </b-form-group>
 
-            <b-form-group id="card-number-group"
-                class="label-group"
-                label="CARD NUMBER"
-                label-for="card-number-input">
+            <b-form-group>
 
-                <b-form-input id="card-number-input"
-                    class="input-group"
-                    type="text"
-                    v-model="cardNumber"
-                    required
-                    placeholder="**** **** **** ****">
-                </b-form-input>
+                <label class="label-group">CARD NUMBER</label>
+
+                <BaseInput
+                    :formatter="{ digitsOnly }"
+                    :mask="{ maskCreditCardNumber }"
+                    :value="form.cardNumber"
+                    maxLength="19"
+                    placeholder="**** **** **** ****"
+                    name="cardNumber"
+                />
 
             </b-form-group>
 
@@ -39,26 +37,26 @@
 
                     <b-col cols="6">
 
-                        <label class="label-group">EXPIRE DATE</label>
+                        <label class="label-group">EXPIRY DATE</label>
 
                         <b-row>
 
                             <b-col cols="6">
 
-                                <b-form-select
-                                    class="input-group mb-3"
-                                    v-model="selected"
-                                    :options="options"
+                                <BaseSelect
+                                    class="form-control custom-select mb-3 input-group"
+                                    :options="months"
+                                    name="monthExpiryDate"
                                 />
 
                             </b-col>
 
                             <b-col cols="6">
 
-                                <b-form-select
-                                    class="input-group mb-3"
-                                    v-model="selected"
-                                    :options="options"
+                                <BaseSelect
+                                    class="form-control custom-select mb-3 input-group"
+                                    :options="years"
+                                    name="yearExpiryDate"
                                 />
 
                             </b-col>
@@ -71,11 +69,27 @@
 
                         <label class="label-group">CCV</label>
 
-                        <b-form-input v-model="ccv"
-                            type="text"
+                        <BaseInput
+                            :formatter="{ digitsOnly }"
+                            maxLength="3"
+                            :value="form.ccv"
                             placeholder="123"
-                            class="input-group">
-                        </b-form-input>
+                            name="ccv"
+                        />
+
+                    </b-col>
+
+                </b-row>
+
+                <b-row>
+
+                    <b-col cols="12">
+
+                        <BaseButton
+                            class="credit-card-submit-btn"
+                            type="submit">
+                            PURCHASE
+                        </BaseButton>
 
                     </b-col>
 
