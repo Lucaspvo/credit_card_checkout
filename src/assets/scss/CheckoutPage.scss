@@ -1,0 +1,54 @@
+.checkout-background-div {
+
+  background: linear-gradient(90deg, #06D6A0 70%, #2d3059 30%);
+
+}
+
+.credit-card-checkout-page {
+
+  min-height: 100vh;
+  position: relative;
+  padding: 1px 0;
+
+  .checkout-outter-div {
+
+    width: 100%;
+    min-height: 100%;
+    margin: 50px 0;
+
+    .checkout-container {
+
+      height: 100%;
+
+      .checkout-container-row {
+
+        height: 100%;
+
+        .checkout-container-row-col {
+
+          .checkout-card {
+
+            background: linear-gradient(45deg, #2b4565 60%, #05C693 50%);
+            border: 0;
+            border-radius: 40px;
+            box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.4);
+
+            .credit-card-div {
+
+              background: #f2f0f1;
+              border-radius: 30px;
+              box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.2);
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
