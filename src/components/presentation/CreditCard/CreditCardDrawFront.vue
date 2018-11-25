@@ -11,9 +11,9 @@
 
                 <b-col cols="12">
 
-                    <label class="credit-card-flag">
+                    <base-label class="credit-card-flag">
                         {{ creditCardType || "____" }}
-                    </label>
+                    </base-label>
 
                 </b-col>
 
@@ -23,9 +23,9 @@
 
                 <b-col cols="12">
 
-                    <label class="credit-card-number">
+                    <base-label class="credit-card-number">
                         {{ form.cardNumber || '**** **** **** ****' }}
-                    </label>
+                    </base-label>
 
                 </b-col>
 
@@ -35,17 +35,17 @@
 
                 <b-col cols="9">
 
-                    <label class="credit-card-holder">
+                    <base-label class="credit-card-holder">
                         {{ form.cardHolder || '________________' }}
-                    </label>
+                    </base-label>
 
                 </b-col>
 
                 <b-col cols="3">
 
-                    <label class="credit-card-expiry-date">
+                    <base-label class="credit-card-expiry-date">
                         {{ `${formMonthExpiryDate || '__'} / ${formYearExpiryDate || '__'}` }}
-                    </label>
+                    </base-label>
 
                 </b-col>
 
@@ -57,8 +57,8 @@
 
 </template>
 
-<script src="../container/CreditCardDrawFront.js" />
+<script src="../../container/CreditCard/CreditCardDrawFront.js" />
 
 <style lang="scss">
-@import "../../assets/scss/CreditCardDrawFront.scss"
+@import "../../../assets/scss/CreditCard/CreditCardDrawFront.scss"
 </style>

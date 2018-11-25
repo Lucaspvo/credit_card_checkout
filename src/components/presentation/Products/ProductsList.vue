@@ -4,11 +4,11 @@
 
         <label class="title">Order Summary</label>
 
-        <ProductsListItem
+        <products-list-item
             v-for="(product, index) in products"
             :product="product"
-            :key="index"
-        />
+            :key="index">
+        </products-list-item>
 
         <b-container>
 
@@ -32,8 +32,8 @@
 
 </template>
 
-<script src="../container/ProductsList.js" />
+<script src="../../container/Products/ProductsList.js" />
 
 <style lang="scss">
-@import '../../assets/scss/ProductsList.scss'
+@import '../../../assets/scss/Products/ProductsList.scss'
 </style>

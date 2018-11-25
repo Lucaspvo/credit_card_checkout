@@ -1,5 +1,5 @@
-import ProductsList from '../presentation/ProductsList.vue';
-import BaseCreditCard from '../presentation/BaseCreditCard.vue';
+import ProductsList from '../presentation/Products/ProductsList.vue';
+import BaseCreditCard from '../presentation/CreditCard/BaseCreditCard.vue';
 
 export default {
 
@@ -7,8 +7,8 @@ export default {
 
   components: {
 
-    ProductsList,
-    BaseCreditCard,
+    'products-list': ProductsList,
+    'base-credit-card': BaseCreditCard,
 
   },
 

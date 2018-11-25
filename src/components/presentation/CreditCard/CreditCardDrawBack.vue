@@ -21,9 +21,9 @@
 
                 <b-col cols="12">
 
-                    <label class="credit-card-ccv">
+                    <base-label class="credit-card-ccv">
                         {{ form.ccv || '___' }}
-                    </label>
+                    </base-label>
 
                 </b-col>
 
@@ -35,8 +35,8 @@
 
 </template>
 
-<script src="../container/CreditCardDrawBack.js" />
+<script src="../../container/CreditCard/CreditCardDrawBack.js" />
 
 <style lang="scss">
-@import "../../assets/scss/CreditCardDrawBack.scss"
+@import "../../../assets/scss/CreditCard/CreditCardDrawBack.scss"
 </style>

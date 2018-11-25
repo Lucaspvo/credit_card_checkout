@@ -1,3 +1,5 @@
+import BaseLabel from '../../presentation/BaseLabel';
+
 export default {
 
   name: 'CreditCardDrawFront',
@@ -24,7 +26,7 @@ export default {
 
     formMonthExpiryDate: function() {
 
-      if (this.form.monthExpiryDate === '') return this.form.monthExpiryDate;
+      if (this.form.monthExpiryDate === '' || this.form.monthExpiryDate === 'Month') return '';
 
       return this.form.monthExpiryDate.length < 2 ? `0${this.form.monthExpiryDate.toString()}` : this.form.monthExpiryDate;
 
@@ -32,10 +34,18 @@ export default {
 
     formYearExpiryDate: function() {
 
+      if (this.form.yearExpiryDate === '' || this.form.yearExpiryDate === 'Year') return '';
+
       return this.form.yearExpiryDate.slice(2,4);
 
     },
 
   },
+
+  components: {
+
+    'base-label': BaseLabel,
+
+  }
 
 };

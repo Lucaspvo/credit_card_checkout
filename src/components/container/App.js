@@ -6,7 +6,7 @@ export default {
 
   components: {
 
-    CheckoutPage,
+    'checkout-page': CheckoutPage,
 
   },
 

@@ -1,6 +1,7 @@
 <template>
 
     <select
+        v-model="dataField"
         @change="onChange($event)"
         @click="onClick($event)"
         @focus="onFocus($event)">

@@ -2,7 +2,30 @@ export default {
 
   name: 'BaseSelect',
 
-  props: ['options'],
+  props: [
+    'dataValue',
+    'options',
+  ],
+
+  data: function() {
+
+    return {
+
+      dataField: this.dataValue,
+
+    };
+
+  },
+
+  watch: {
+
+    dataValue(value) {
+
+      this.dataField = value;
+
+    },
+
+  },
 
   methods: {
 

@@ -4,26 +4,23 @@
 
         <b-form-group>
 
-            <CreditCardDraw
+            <credit-card-draw
                 :form="form"
                 :formInput="formInput"
-                :creditCardType="creditCardType"
-            />
+                :creditCardType="creditCardType">
+            </credit-card-draw>
 
         </b-form-group>
 
-        <CreditCardForm
+        <credit-card-form
             :form="form"
             @onChange="onChange"
             @onFocus="onFocus"
-            @onClick="onClick"
-        />
+            @onClick="onClick">
+        </credit-card-form>
 
     </div>
 
 </template>
 
-<script src="../container/BaseCreditCard.js" />
-
-<style lang="scss">
-</style>
+<script src="../../container/CreditCard/BaseCreditCard.js" />

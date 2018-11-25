@@ -1,5 +1,5 @@
-import CreditCardForm from '../presentation/CreditCardForm.vue';
-import CreditCardDraw from '../presentation/CreditCardDraw.vue';
+import CreditCardForm from '../../presentation/CreditCard/CreditCardForm.vue';
+import CreditCardDraw from '../../presentation/CreditCard/CreditCardDraw.vue';
 
 export default {
 
@@ -7,8 +7,8 @@ export default {
 
   components: {
 
-    CreditCardForm,
-    CreditCardDraw,
+    'credit-card-form': CreditCardForm,
+    'credit-card-draw': CreditCardDraw,
 
   },
 
@@ -22,9 +22,9 @@ export default {
 
         cardNumber: '',
 
-        yearExpiryDate: '',
+        yearExpiryDate: 'Year',
 
-        monthExpiryDate: '',
+        monthExpiryDate: 'Month',
 
         ccv: '',
 

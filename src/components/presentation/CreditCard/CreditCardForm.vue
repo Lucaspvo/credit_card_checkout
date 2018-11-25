@@ -6,19 +6,20 @@
 
             <b-form-group>
 
-                <BaseLabel
+                <base-label
                     :class="{
                         'invalid-input-label': errors.cardHolder,
                         'valid-input-label': validated,
                         'label-group': true
                     }">
                     CARD HOLDER
-                </BaseLabel>
+                </base-label>
 
-                <BaseInput
+                <base-input
                     :formatter="{ charactersOnly, upperCase }"
                     :error="errors.cardHolder"
                     :inputValidated="validated"
+                    :dataValue="form.cardHolder"
                     @onChange="onChange"
                     @onFocus="onFocus"
                     @onClick="onClick"
@@ -26,30 +27,31 @@
                     type="text"
                 />
 
-                <BaseLabel
+                <base-label
                     class="error-input-label"
                     v-show="errors.cardHolder">
                     {{ errors.cardHolder }}
-                </BaseLabel>
+                </base-label>
 
             </b-form-group>
 
             <b-form-group>
 
-                <BaseLabel
+                <base-label
                     :class="{
                         'invalid-input-label': errors.cardNumber,
                         'valid-input-label': validated,
                         'label-group': true
                     }">
                     CARD NUMBER
-                </BaseLabel>
+                </base-label>
 
-                <BaseInput
+                <base-input
                     :formatter="{ digitsOnly }"
                     :mask="'#### #### #### ####'"
                     :error="errors.cardNumber"
                     :inputValidated="validated"
+                    :dataValue="form.cardNumber"
                     @onChange="onChange"
                     @onFocus="onFocus"
                     @onClick="onClick"
@@ -59,11 +61,11 @@
                     type="text"
                 />
 
-                <BaseLabel
+                <base-label
                     class="error-input-label"
                     v-show="errors.cardNumber">
                     {{ errors.cardNumber }}
-                </BaseLabel>
+                </base-label>
 
             </b-form-group>
 
@@ -73,20 +75,20 @@
 
                     <b-col cols="6">
 
-                        <BaseLabel
+                        <base-label
                             :class="{
                                 'invalid-input-label': errors.monthExpiryDate || errors.yearExpiryDate,
                                 'valid-input-label': validated,
                                 'label-group': true
                             }">
                             EXPIRY DATE
-                        </BaseLabel>
+                        </base-label>
 
                         <b-row>
 
                             <b-col cols="6">
 
-                                <BaseSelect
+                                <base-select
                                     :class="{
                                         'is-invalid': errors.monthExpiryDate,
                                         'is-valid': validated,
@@ -95,23 +97,24 @@
                                         'input-group': true
                                     }"
                                     :options="months"
+                                    :dataValue="form.monthExpiryDate"
                                     @onChange="onChange"
                                     @onFocus="onFocus"
                                     @onClick="onClick"
                                     name="monthExpiryDate"
                                 />
 
-                                <BaseLabel
+                                <base-label
                                     class="error-input-label"
                                     v-show="errors.monthExpiryDate">
                                     {{ errors.monthExpiryDate }}
-                                </BaseLabel>
+                                </base-label>
 
                             </b-col>
 
                             <b-col cols="6">
 
-                                <BaseSelect
+                                <base-select
                                     :class="{
                                         'is-invalid': errors.yearExpiryDate,
                                         'is-valid': validated,
@@ -120,17 +123,18 @@
                                         'input-group': true
                                     }"
                                     :options="years"
+                                    :dataValue="form.yearExpiryDate"
                                     @onChange="onChange"
                                     @onFocus="onFocus"
                                     @onClick="onClick"
                                     name="yearExpiryDate"
                                 />
 
-                                <BaseLabel
+                                <base-label
                                     class="error-input-label"
                                     v-show="errors.yearExpiryDate">
                                     {{ errors.yearExpiryDate }}
-                                </BaseLabel>
+                                </base-label>
 
                             </b-col>
 
@@ -140,19 +144,20 @@
 
                     <b-col cols="6">
 
-                        <BaseLabel
+                        <base-label
                             :class="{
                                 'invalid-input-label': errors.ccv,
                                 'valid-input-label': validated,
                                 'label-group': true
                             }">
                             CCV
-                        </BaseLabel>
+                        </base-label>
 
-                        <BaseInput
+                        <base-input
                             :formatter="{ digitsOnly }"
                             :error="errors.ccv"
                             :inputValidated="validated"
+                            :dataValue="form.ccv"
                             @onChange="onChange"
                             @onFocus="onFocus"
                             @onClick="onClick"
@@ -161,11 +166,11 @@
                             name="ccv"
                         />
 
-                        <BaseLabel
+                        <base-label
                             class="error-input-label"
                             v-show="errors.ccv">
                             {{ errors.ccv }}
-                        </BaseLabel>
+                        </base-label>
 
                     </b-col>
 
@@ -179,11 +184,11 @@
 
                     <b-col cols="12">
 
-                        <BaseButton
+                        <base-button
                             class="credit-card-submit-btn"
                             type="submit">
                             PURCHASE
-                        </BaseButton>
+                        </base-button>
 
                     </b-col>
 
@@ -197,8 +202,8 @@
 
 </template>
 
-<script src="../container/CreditCardForm.js" />
+<script src="../../container/CreditCard/CreditCardForm.js" />
 
 <style lang="scss">
-@import '../../assets/scss/CreditCardForm.scss'
+@import '../../../assets/scss/CreditCard/CreditCardForm.scss'
 </style>

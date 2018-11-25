@@ -17,9 +17,19 @@ export default {
 
     return {
 
-      dataField: '',
+      dataField: this.dataValue,
 
     };
+
+  },
+
+  watch: {
+
+    dataValue(value) {
+
+      this.dataField = value;
+
+    },
 
   },
 

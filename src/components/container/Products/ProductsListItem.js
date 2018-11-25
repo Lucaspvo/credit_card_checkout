@@ -1,3 +1,5 @@
+import BaseLabel from '../../presentation/BaseLabel';
+
 export default {
 
   name: "ProductsListItem",
@@ -13,6 +15,12 @@ export default {
       return this.product.description.slice(0, 20) + '...';
 
     },
+
+  },
+
+  components: {
+
+    'base-label': BaseLabel,
 
   },
 

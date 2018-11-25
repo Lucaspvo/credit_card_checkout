@@ -2,10 +2,6 @@
 
     <div class="credit-card-checkout-page checkout-background-div">
 
-        <!-- <img class="checkout-background-image" src="../../../public/img/colorful-wall.jpg" /> -->
-
-        <!-- <div class="checkout-background-div"></div> -->
-
         <div class="checkout-outter-div">
 
             <b-container class="checkout-container bv-example-row bv-example-row-flex-cols">
@@ -22,15 +18,15 @@
 
                                     <b-col cols="12" sm="12" md="6">
 
-                                        <ProductsList
-                                            :products="products"
-                                        />
+                                        <products-list
+                                            :products="products">
+                                        </products-list>
 
                                     </b-col>
 
                                     <b-col class="credit-card-div" cols="12" sm="12" md="6">
 
-                                        <BaseCreditCard />
+                                        <base-credit-card></base-credit-card>
 
                                     </b-col>
 

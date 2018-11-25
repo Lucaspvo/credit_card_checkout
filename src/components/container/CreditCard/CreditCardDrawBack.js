@@ -1,3 +1,5 @@
+import BaseLabel from '../../presentation/BaseLabel';
+
 export default {
 
   name: 'CreditCardDrawBack',
@@ -18,5 +20,11 @@ export default {
     },
 
   },
+
+  components: {
+
+    'base-label': BaseLabel,
+
+  }
 
 };
