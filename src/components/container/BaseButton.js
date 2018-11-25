@@ -2,6 +2,9 @@ export default {
 
   name: 'BaseButton',
 
-  props: ['className', 'typeBtn'],
+  props: [
+    'className',
+    'typeBtn'
+  ],
 
 };

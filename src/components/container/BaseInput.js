@@ -35,6 +35,13 @@ export default {
 
   methods: {
 
+    /**
+     * Function to handle data on input event,
+     * analyze it and save it on its data and
+     * emit event to parent component
+     * @param  {object} e element being targeted
+     * @return {undefined]}   default return called at the end
+     */
     inputChange: function(e) {
 
       const functions = this.formatter;
@@ -64,6 +71,13 @@ export default {
 
     },
 
+    /**
+     * Function to handle paste event on input,
+     * analyze it and make the necessary changes.
+     * Also emitting event to parent component
+     * @param  {object} e element being targeted
+     * @return {undefined]}   default return called at the end
+     */
     pasteEvent(e) {
 
       e.preventDefault();
@@ -74,6 +88,12 @@ export default {
 
     },
 
+    /**
+     * Function to handle click event on input and
+     * emit event to parent component
+     * @param  {object} e element being targeted
+     * @return {undefined}   default return called at the end
+     */
     onClick(e) {
 
       e.preventDefault();
@@ -83,6 +103,12 @@ export default {
 
     },
 
+    /**
+     * Function to handle focus event on input and
+     * emit event to parent component
+     * @param  {object} e element being targeted
+     * @return {undefined}   default return called at the end
+     */
     onFocus(e) {
 
       e.preventDefault();

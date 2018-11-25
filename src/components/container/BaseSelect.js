@@ -29,6 +29,12 @@ export default {
 
   methods: {
 
+    /**
+     * Function to handle data on change event and
+     * emit event to parent component
+     * @param  {object} e element being targeted
+     * @return {undefined]}   default return called at the end
+     */
     onChange(e) {
 
       e.preventDefault();
@@ -38,6 +44,12 @@ export default {
 
     },
 
+    /**
+     * Function to handle click event on input and
+     * emit event to parent component
+     * @param  {object} e element being targeted
+     * @return {undefined}   default return called at the end
+     */
     onClick(e) {
 
       e.preventDefault();
@@ -47,6 +59,12 @@ export default {
 
     },
 
+    /**
+     * Function to handle focus event on input and
+     * emit event to parent component
+     * @param  {object} e element being targeted
+     * @return {undefined}   default return called at the end
+     */
     onFocus(e) {
 
       e.preventDefault();

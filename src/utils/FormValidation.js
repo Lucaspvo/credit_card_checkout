@@ -1,5 +1,11 @@
 const valid = require('card-validator');
 
+/**
+ * Function to validate all entries from
+ * the checkout form
+ * @param  {object} form form that will be validated
+ * @return {object}      object containing all possible errors encountered at validation
+ */
 export default function(form) {
 
   const errors = {};
@@ -19,8 +25,6 @@ export default function(form) {
   }
 
   let numberValidation = valid.number(form.cardNumber.value);
-
-  console.log(numberValidation);
 
   if (form.cardNumber.value === '') {
 

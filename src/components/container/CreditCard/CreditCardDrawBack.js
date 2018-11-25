@@ -11,6 +11,12 @@ export default {
 
   computed: {
 
+    /**
+     * Function responsible for determining
+     * the credit card draw should show its
+     * back
+     * @return {boolean} true or false wether the input being targted is included on array
+     */
     frontCard: function() {
 
       return [

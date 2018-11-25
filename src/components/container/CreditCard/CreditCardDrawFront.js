@@ -12,6 +12,12 @@ export default {
 
   computed: {
 
+    /**
+     * Function responsible for determining
+     * the credit card draw should show its
+     * front
+     * @return {boolean} true or false wether the input being targted is included on array
+     */
     frontCard: function() {
 
       return [
@@ -24,6 +30,11 @@ export default {
 
     },
 
+    /**
+     * Function customize month's value for the
+     * interface
+     * @return {[type]} month expiry date modified (or not)
+     */
     formMonthExpiryDate: function() {
 
       if (this.form.monthExpiryDate === '' || this.form.monthExpiryDate === 'Month') return '';
@@ -32,6 +43,11 @@ export default {
 
     },
 
+    /**
+     * Function customize year's value for the
+     * interface
+     * @return {[type]} year expiry date modified (or not)
+     */
     formYearExpiryDate: function() {
 
       if (this.form.yearExpiryDate === '' || this.form.yearExpiryDate === 'Year') return '';

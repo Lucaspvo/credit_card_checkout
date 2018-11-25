@@ -62,6 +62,11 @@ export default {
 
     charactersOnly,
 
+    /**
+     * Submition of credit card checkout form
+     * @param  {object} e element tagged (in this case "form")
+     * @return {undefined}   default return called at the end
+     */
     onSubmit(e) {
 
       e.preventDefault();
@@ -97,6 +102,14 @@ export default {
 
     },
 
+    /**
+     * Listen for a change event from child component,
+     * changing its data and emiting new events to parent
+     * component
+     * @param  {string} value value of the field being changed
+     * @param  {string} name  name of the field being changed
+     * @return {undefined}       default return called at the end
+     */
     onChange(value, name) {
 
       if (name === 'cardNumber' && value.length > 0) {
@@ -128,12 +141,24 @@ export default {
 
     },
 
+    /**
+     * Listen for a click event from child component,
+     * emiting new event to parent component
+     * @param  {object} e element tagged
+     * @return {undefined}   default return called at the end
+     */
     onClick(e) {
 
       this.$emit('onClick', e);
 
     },
 
+    /**
+     * Listen for a focus event from child component,
+     * emiting new event to parent component
+     * @param  {object} e element tagged
+     * @return {undefined}   default return called at the end
+     */
     onFocus(e) {
 
       this.$emit('onFocus', e);
