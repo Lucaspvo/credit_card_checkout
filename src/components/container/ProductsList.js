@@ -1,4 +1,4 @@
-import ProductsItem from '../presentation/ProductsItem.vue';
+import ProductsListItem from '../presentation/ProductsListItem.vue';
 
 export default {
 
@@ -6,7 +6,7 @@ export default {
 
   components: {
 
-    ProductsItem,
+    ProductsListItem,
 
   },
 

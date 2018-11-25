@@ -4,7 +4,7 @@
 
         <label class="title">Order Summary</label>
 
-        <ProductsItem
+        <ProductsListItem
             v-for="(product, index) in products"
             :product="product"
             :key="index"

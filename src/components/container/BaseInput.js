@@ -2,13 +2,22 @@ export default {
 
   name: 'BaseInput',
 
-  props: ['value', 'formatter', 'mask', 'maxLength', 'placeholder'],
+  props: [
+    'dataValue',
+    'formatter',
+    'mask',
+    'maxLength',
+    'placeholder',
+    'error',
+    'onPaste',
+    'inputValidated'
+  ],
 
   data: function() {
 
     return {
 
-      dataValue: this.value,
+      dataField: '',
 
     };
 
@@ -18,19 +27,58 @@ export default {
 
     inputChange: function(e) {
 
-      const functions = { ...this.formatter, ...this.mask };
+      const functions = this.formatter;
 
-      for (let func in functions) {
+      if (Object.keys(functions).length > 0) {
 
-        if (functions.hasOwnProperty(func)) {
+        for (let func in functions) {
 
-          const funcValue = functions[func](e.target.value);
+          if (functions.hasOwnProperty(func)) {
 
-          this.$refs.input.value = this.dataValue = funcValue;
+            const funcValue = functions[func](e.target.value, e);
+
+            this.$refs.input.value = this.dataField = funcValue;
+
+          }
 
         }
 
+        this.$emit('onChange', this.$refs.input.value, e.target.name);
+
+        return;
+
       }
+
+      this.dataField = e.target.value;
+      this.$emit('onChange', e.target.value, e.target.name);
+
+    },
+
+    pasteEvent(e) {
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      this.$refs.input.value = this.dataField = this.onPaste(e.clipboardData.getData('text'));
+      this.$emit('onChange', this.$refs.input.value, e.target.name);
+
+    },
+
+    onClick(e) {
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      this.$emit('onClick', e);
+
+    },
+
+    onFocus(e) {
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      this.$emit('onFocus', e);
 
     },
 

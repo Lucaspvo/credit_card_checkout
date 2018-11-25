@@ -1,13 +1,21 @@
 <template>
 
     <input
-        class="input-group form-control"
-        type="text"
-        :value="value"
-        @input="inputChange($event)"
-        ref="input"
+        :class="{
+            'is-invalid': error,
+            'input-group': true,
+            'form-control': true,
+            'is-valid': inputValidated
+        }"
         :maxLength="maxLength"
-        :placeholder="placeholder"
+        :placeholder="placeholder || ''"
+        @paste="pasteEvent || null"
+        @input="inputChange($event)"
+        @click="onClick($event)"
+        @focus="onFocus($event)"
+        v-model="dataField"
+        v-mask="mask || ''"
+        ref="input"
     />
 
 </template>

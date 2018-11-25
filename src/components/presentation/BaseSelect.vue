@@ -1,8 +1,11 @@
 <template>
 
-    <select>
+    <select
+        @change="onChange($event)"
+        @click="onClick($event)"
+        @focus="onFocus($event)">
 
-        <option v-for="(option, index) in options" :key="index" :value="index">
+        <option v-for="(option, index) in options" :key="index" :value="option">
 
             {{option}}
 

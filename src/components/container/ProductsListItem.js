@@ -1,6 +1,6 @@
 export default {
 
-  name: "ProductsItem",
+  name: "ProductsListItem",
 
   props: [
     'product',

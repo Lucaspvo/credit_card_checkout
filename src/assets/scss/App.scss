@@ -1,2 +1,48 @@
 #app {
+
+  .error-input-label {
+
+    margin: 0;
+    font-size: 13px;
+    font-weight: 300;
+    color: #dc3545;
+    width: 100%;
+    text-align: start;
+
+  }
+
+  .invalid-input-label {
+
+    color: #dc3545;
+
+  }
+
+  .is-valid {
+
+    border-color: #9BC53D;
+
+  }
+
+  .valid-input-label {
+
+    color: #9BC53D;
+
+  }
+
+  .card-top {
+
+    z-index: 1000;
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.2);
+    background: #E71D36;
+
+  }
+
+  .card-bottom {
+
+    z-index: 900;
+    background: #E87481;
+    box-shadow: 0 0 0 rgba(0,0,0,0.2);
+
+  }
+
 }

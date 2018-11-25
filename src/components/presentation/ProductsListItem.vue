@@ -45,8 +45,8 @@
 
 </template>
 
-<script src="../container/ProductsItem.js" />
+<script src="../container/ProductsListItem.js" />
 
 <style lang="scss">
-@import '../../assets/scss/ProductsItem.scss'
+@import '../../assets/scss/ProductsListItem.scss'
 </style>
