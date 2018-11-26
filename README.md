@@ -7,7 +7,11 @@ Before getting to the next steps, go to a directory of your choice and clone the
 
 `git clone https://github.com/Lucaspvo/credit_card_checkout.git`
 
-After cloning it you can advance to one of the next steps.
+After cloning it, go to the root application directory by typing:
+
+`cd credit_card_checkout`
+
+and then you can advance to one of the next steps.
 
 ## Using Docker
 
@@ -37,7 +41,7 @@ Install NodeJs on your local machine by following one of the instructions at the
 
 https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions-enterprise-linux-fedora-and-snap-packages
 
-After installing NodeJs on your local machine, run the next commands:
+After installing NodeJs on your local machine, run the next commands still inside the root application folder (credit_card_checkout/):
 
 `npm install`
 
