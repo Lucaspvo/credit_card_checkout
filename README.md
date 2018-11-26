@@ -21,13 +21,9 @@ https://docs.docker.com/install/linux/docker-ce/ubuntu/#uninstall-old-versions
 
 After installing it, run the following command to instantiate the docker container with a nodejs environment to run the application:
 
-`docker run -v $(pwd):/usr/src/credit_card_checkout -w /usr/src/credit_card_checkout -p 80:8080 -it node bash`
+`docker run -u $UID:$UID -v $(pwd):/usr/src/credit_card_checkout -w /usr/src/credit_card_checkout -p 80:8080 -it node bash`
 
 Once inside the container, run the next commands:
-
-`su - node`
-
-`cd /usr/src/credit_card_checkout`
 
 `npm install`
 
