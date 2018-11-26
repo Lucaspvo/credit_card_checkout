@@ -68,6 +68,18 @@ export default {
 
       }
 
+      if (name === 'cardNumber' && value === '') {
+
+        this.creditCardType = '';
+
+      }
+
+      if (name === 'validated') {
+
+        this.$emit('onChange', value, name);
+
+      }
+
       this.form[name] = value;
 
     },

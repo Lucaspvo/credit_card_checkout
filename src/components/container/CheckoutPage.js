@@ -1,5 +1,6 @@
 import ProductsList from '../presentation/Products/ProductsList.vue';
 import BaseCreditCard from '../presentation/CreditCard/BaseCreditCard.vue';
+import BaseLabel from '../presentation/BaseLabel.vue';
 
 export default {
 
@@ -9,6 +10,7 @@ export default {
 
     'products-list': ProductsList,
     'base-credit-card': BaseCreditCard,
+    'base-label': BaseLabel,
 
   },
 
@@ -47,7 +49,39 @@ export default {
 
       ],
 
+      successPurchase: false,
+
     };
+
+  },
+
+  methods: {
+
+    /**
+     * Function to handle onChange event
+     * to make necessary changes on its state
+     * @param  {string} value value from the input
+     * @param  {string} name  name from the input
+     * @return {undefined}    default return called at the end
+     */
+    onChange(value, name) {
+
+      if (name === 'validated') {
+
+        setTimeout(() => {
+
+          this.successPurchase = value;
+          setTimeout(() => {
+
+            this.successPurchase = false;
+
+          }, 10000);
+
+        }, 1000);
+
+      }
+
+    },
 
   },
 

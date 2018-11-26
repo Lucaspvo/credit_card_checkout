@@ -9,6 +9,7 @@
         }"
         :maxLength="maxLength"
         :placeholder="placeholder || ''"
+        :disabled="disabled || false"
         @paste="pasteEvent || null"
         @input="inputChange($event)"
         @click="onClick($event)"

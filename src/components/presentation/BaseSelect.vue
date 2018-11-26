@@ -1,6 +1,7 @@
 <template>
 
     <select
+        :disabled="disabled || false"
         v-model="dataField"
         @change="onChange($event)"
         @click="onClick($event)"

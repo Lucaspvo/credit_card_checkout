@@ -4,7 +4,8 @@ export default {
 
   props: [
     'className',
-    'typeBtn'
+    'typeBtn',
+    'disabled'
   ],
 
 };

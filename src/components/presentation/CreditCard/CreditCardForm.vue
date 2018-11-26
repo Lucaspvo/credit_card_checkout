@@ -20,6 +20,7 @@
                     :error="errors.cardHolder"
                     :inputValidated="validated"
                     :dataValue="form.cardHolder"
+                    :disabled="validated"
                     @onChange="onChange"
                     @onFocus="onFocus"
                     @onClick="onClick"
@@ -52,6 +53,7 @@
                     :error="errors.cardNumber"
                     :inputValidated="validated"
                     :dataValue="form.cardNumber"
+                    :disabled="validated"
                     @onChange="onChange"
                     @onFocus="onFocus"
                     @onClick="onClick"
@@ -98,6 +100,7 @@
                                     }"
                                     :options="months"
                                     :dataValue="form.monthExpiryDate"
+                                    :disabled="validated"
                                     @onChange="onChange"
                                     @onFocus="onFocus"
                                     @onClick="onClick"
@@ -124,6 +127,7 @@
                                     }"
                                     :options="years"
                                     :dataValue="form.yearExpiryDate"
+                                    :disabled="validated"
                                     @onChange="onChange"
                                     @onFocus="onFocus"
                                     @onClick="onClick"
@@ -158,11 +162,12 @@
                             :error="errors.ccv"
                             :inputValidated="validated"
                             :dataValue="form.ccv"
+                            :disabled="validated"
                             @onChange="onChange"
                             @onFocus="onFocus"
                             @onClick="onClick"
                             maxLength="3"
-                            placeholder="123"
+                            placeholder="***"
                             name="ccv"
                         />
 
@@ -185,6 +190,7 @@
                     <b-col cols="12">
 
                         <base-button
+                            :disabled="validated"
                             class="credit-card-submit-btn"
                             type="submit">
                             PURCHASE

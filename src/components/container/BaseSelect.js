@@ -5,6 +5,7 @@ export default {
   props: [
     'dataValue',
     'options',
+    'disabled'
   ],
 
   data: function() {

@@ -1,6 +1,7 @@
 <template>
 
-    <button>
+    <button
+        :disabled="disabled || false">
 
         <slot></slot>
 

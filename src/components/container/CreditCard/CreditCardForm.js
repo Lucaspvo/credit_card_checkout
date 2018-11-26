@@ -74,11 +74,17 @@ export default {
       const form = e.target.elements;
 
       this.errors = formValidation(form);
-      this.validated = Object.keys(this.errors).length === 0 ? true : false;
+
+      if (Object.keys(this.errors).length === 0) {
+
+        this.validated = true;
+        this.$emit('onChange', this.validated, 'validated');
+
+      }
 
       if (this.validated) {
 
-        let timeoutId = setTimeout(() => {
+        setTimeout(() => {
 
           this.validated = false;
 

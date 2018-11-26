@@ -10,7 +10,8 @@ export default {
     'placeholder',
     'error',
     'onPaste',
-    'inputValidated'
+    'inputValidated',
+    'disabled'
   ],
 
   data: function() {
