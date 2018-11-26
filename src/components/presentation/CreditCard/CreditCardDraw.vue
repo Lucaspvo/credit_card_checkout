@@ -4,13 +4,13 @@
 
         <credit-card-draw-front
             :form="form"
-            :formInput="formInput"
-            :creditCardType="creditCardType">
+            :form-input="formInput"
+            :credit-card-type="creditCardType">
         </credit-card-draw-front>
 
         <credit-card-draw-back
             :form="form"
-            :formInput="formInput">
+            :form-input="formInput">
         </credit-card-draw-back>
 
     </div>

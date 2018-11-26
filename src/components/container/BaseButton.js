@@ -2,10 +2,11 @@ export default {
 
   name: 'BaseButton',
 
-  props: [
-    'className',
-    'typeBtn',
-    'disabled'
-  ],
+  props: {
+
+    'className': String,
+    'disabled': Boolean
+    
+  },
 
 };

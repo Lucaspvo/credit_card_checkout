@@ -6,8 +6,8 @@
 
             <credit-card-draw
                 :form="form"
-                :formInput="formInput"
-                :creditCardType="creditCardType">
+                :form-input="formInput"
+                :credit-card-type="creditCardType">
             </credit-card-draw>
 
         </b-form-group>

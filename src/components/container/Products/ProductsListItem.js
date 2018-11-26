@@ -4,9 +4,11 @@ export default {
 
   name: "ProductsListItem",
 
-  props: [
-    'product',
-  ],
+  props: {
+
+    'product': Object,
+
+  },
 
   computed: {
 

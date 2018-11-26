@@ -17,9 +17,9 @@
 
                 <base-input
                     :formatter="{ charactersOnly, upperCase }"
-                    :error="errors.cardHolder"
-                    :inputValidated="validated"
-                    :dataValue="form.cardHolder"
+                    :error="errors.cardHolder || ''"
+                    :input-validated="validated"
+                    :data-value="form.cardHolder"
                     :disabled="validated"
                     @onChange="onChange"
                     @onFocus="onFocus"
@@ -50,14 +50,14 @@
                 <base-input
                     :formatter="{ digitsOnly }"
                     :mask="'#### #### #### ####'"
-                    :error="errors.cardNumber"
-                    :inputValidated="validated"
-                    :dataValue="form.cardNumber"
+                    :error="errors.cardNumber || ''"
+                    :input-validated="validated"
+                    :data-value="form.cardNumber"
                     :disabled="validated"
                     @onChange="onChange"
                     @onFocus="onFocus"
                     @onClick="onClick"
-                    maxLength="19"
+                    max-length="19"
                     placeholder="**** **** **** ****"
                     name="cardNumber"
                     type="text"
@@ -99,7 +99,7 @@
                                         'input-group': true
                                     }"
                                     :options="months"
-                                    :dataValue="form.monthExpiryDate"
+                                    :data-value="form.monthExpiryDate"
                                     :disabled="validated"
                                     @onChange="onChange"
                                     @onFocus="onFocus"
@@ -126,7 +126,7 @@
                                         'input-group': true
                                     }"
                                     :options="years"
-                                    :dataValue="form.yearExpiryDate"
+                                    :data-value="form.yearExpiryDate"
                                     :disabled="validated"
                                     @onChange="onChange"
                                     @onFocus="onFocus"
@@ -159,9 +159,9 @@
 
                         <base-input
                             :formatter="{ digitsOnly }"
-                            :error="errors.ccv"
-                            :inputValidated="validated"
-                            :dataValue="form.ccv"
+                            :error="errors.ccv || ''"
+                            :input-validated="validated"
+                            :data-value="form.ccv"
                             :disabled="validated"
                             @onChange="onChange"
                             @onFocus="onFocus"

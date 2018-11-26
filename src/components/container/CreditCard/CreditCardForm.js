@@ -11,9 +11,11 @@ export default {
 
   name: 'CreditCardForm',
 
-  props: [
-    'form'
-  ],
+  props: {
+
+    'form': Object
+
+  },
 
   data: function() {
 

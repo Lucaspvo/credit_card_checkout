@@ -2,11 +2,13 @@ export default {
 
   name: 'BaseSelect',
 
-  props: [
-    'dataValue',
-    'options',
-    'disabled'
-  ],
+  props: {
+
+    'dataValue': String,
+    'options': Array,
+    'disabled': Boolean
+
+  },
 
   data: function() {
 

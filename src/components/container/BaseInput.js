@@ -2,17 +2,19 @@ export default {
 
   name: 'BaseInput',
 
-  props: [
-    'dataValue',
-    'formatter',
-    'mask',
-    'maxLength',
-    'placeholder',
-    'error',
-    'onPaste',
-    'inputValidated',
-    'disabled'
-  ],
+  props: {
+
+    'dataValue': String,
+    'formatter': Object,
+    'mask': String,
+    'maxLength': String,
+    'placeholder': String,
+    'error': String,
+    'onPaste': Function,
+    'inputValidated': Boolean,
+    'disabled': Boolean
+
+  },
 
   data: function() {
 

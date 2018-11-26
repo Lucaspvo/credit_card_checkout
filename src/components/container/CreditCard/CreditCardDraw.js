@@ -5,11 +5,13 @@ export default {
 
   name: 'CreditCardDraw',
 
-  props: [
-      'form',
-      'formInput',
-      'creditCardType',
-  ],
+  props: {
+
+    'form': Object,
+    'formInput': String,
+    'creditCardType': String,
+
+  },
 
   components: {
 

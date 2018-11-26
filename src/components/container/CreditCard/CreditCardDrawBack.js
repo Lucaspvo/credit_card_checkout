@@ -4,10 +4,12 @@ export default {
 
   name: 'CreditCardDrawBack',
 
-  props: [
-    'form',
-    'formInput',
-  ],
+  props: {
+
+    'form': Object,
+    'formInput': String
+
+  },
 
   computed: {
 
